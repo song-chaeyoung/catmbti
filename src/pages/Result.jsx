@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   align-items: center;
   gap: 20px;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 110px);
   color: #fff;
   @media screen and (max-width: 780px) {
     gap: 0;

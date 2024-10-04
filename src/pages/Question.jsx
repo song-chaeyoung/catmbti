@@ -6,7 +6,7 @@ import { createSearchParams, useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 98vh;
+  height: calc(100vh - 120px);
   display: flex;
   flex-direction: column;
   align-items: center;

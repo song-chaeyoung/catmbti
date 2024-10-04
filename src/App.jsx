@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: "SimKyungha";
     background: url("https://i.pinimg.com/originals/24/62/09/246209d8f51ebcfc94f3b9381f2acf61.jpg") center/cover no-repeat ;
-    height: 100vh;
+    height: calc(100vh - 100px);
     position: relative;
     &::before {
       content: "";
