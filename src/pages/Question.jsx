@@ -12,29 +12,63 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 30px;
+  padding: 10px;
+  padding: 10px;
 `;
 
 const Title = styled.div`
   font-size: 30px;
   text-align: center;
   padding: 8px 16px;
-  background: indianred;
+  background: rgba(205, 92, 92, 0.9);
   color: #fff;
   border-radius: 8px;
+  @media screen and (max-width: 780px) {
+    width: 300px;
+    font-size: 24px;
+    padding: 6px 12px;
+  }
+  @media screen and (max-width: 360px) {
+    width: 200px;
+    font-size: 18px;
+    padding: 6px 12px;
+  }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
   & > button {
-    width: 300px;
+    width: 400px;
     height: 150px;
     background: dodgerblue;
     border: none;
     transition: all 0.3s;
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+    & > button {
+      width: 300px;
+      height: 150px;
+      background: dodgerblue;
+      border: none;
+      transition: all 0.3s;
+      padding: 10px;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    flex-direction: column;
+    & > button {
+      width: 200px;
+      height: 150px;
+      background: dodgerblue;
+      border: none;
+      transition: all 0.3s;
+    }
   }
 `;
 

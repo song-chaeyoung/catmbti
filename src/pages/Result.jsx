@@ -13,6 +13,9 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   color: #fff;
+  @media screen and (max-width: 780px) {
+    gap: 0;
+  }
 `;
 
 const Header = styled.div`
@@ -25,12 +28,15 @@ const Contents = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+  @media screen and (max-width: 780px) {
+    gap: 4px;
+  }
 `;
 
 const Title = styled.div`
   font-size: 30px;
-  margin: 20px 0 10px;
+  margin: 10px 0;
 `;
 
 const LogoImg = styled.div`
@@ -42,10 +48,12 @@ const LogoImg = styled.div`
 `;
 
 const Desc = styled.div`
+  text-align: center;
   font-size: 20px;
-  margin: 10px 0;
   line-height: 150%;
   width: 340px;
+  @media screen and (max-width: 780px) {
+  }
 `;
 
 const Result = () => {
