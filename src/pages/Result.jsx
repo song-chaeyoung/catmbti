@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Button } from "react-bootstrap";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ResultData } from "../assets/questiondata";
+import KaKaoShareBtn from "../components/KaKaoShareBtn";
 
 const Wrapper = styled.div`
   display: flex;
@@ -56,6 +57,12 @@ const Desc = styled.div`
   }
 `;
 
+const ButtonGroup = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
 const Result = () => {
   const [data, setData] = useState({});
   const [searchParms] = useSearchParams();
@@ -71,8 +78,6 @@ const Result = () => {
     setData(result);
   }, [mbti]);
 
-  console.log(data);
-
   return (
     <Wrapper>
       <Header>예비집사 판별기</Header>
@@ -87,7 +92,10 @@ const Result = () => {
           🐱
         </Desc>
         <Desc>{data.desc}</Desc>
-        <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
+        <ButtonGroup>
+          <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
+          <KaKaoShareBtn />
+        </ButtonGroup>
       </Contents>
     </Wrapper>
   );
